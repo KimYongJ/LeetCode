@@ -16,7 +16,8 @@ class Solution {
         char[] crr = s.toCharArray();
         for(int i=0; i<crr.length; i++){
             if(i+1!=crr.length && hm.get(crr[i])<hm.get(crr[i+1])){
-                sum += hm.get(crr[i+1])-hm.get(crr[i++]);
+                sum += hm.get(crr[i+1])-hm.get(crr[i]);
+                i++;
             }
             else{
                 sum += hm.get(crr[i]);
