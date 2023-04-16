@@ -22,7 +22,6 @@ class Solution {
                     node.next = list2;
                     list2 = list2.next;
                 }
-                node = node.next;
             }else{
                 if(list1 != null){
                     node.next = list1;
@@ -31,9 +30,8 @@ class Solution {
                     node.next = list2;
                     list2 = list2.next;
                 }
-                node = node.next;
             }
-            
+            node = node.next;
         }
         
         return result.next;
