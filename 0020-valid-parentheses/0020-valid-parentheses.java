@@ -1,11 +1,11 @@
 import java.util.HashMap;
 class Solution {
-    public HashMap<Character,Character> hm = new HashMap<>(){
+    public HashMap<Character, Character> hm = new HashMap<>(){
         {
             put(')','(');
             put('}','{');
             put(']','[');
-        }
+        }  
     };
     public boolean isValid(String s) {
         Stack<Character> st = new Stack<>();
@@ -16,8 +16,7 @@ class Solution {
             }else if(st.isEmpty() || st.pop() != hm.get(c)){
                 return false;
             }
-                
         }
-        return st.isEmpty();
+        return st.isEmpty();       
     }
 }
